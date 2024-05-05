@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Catcher</title>
+
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.2.5/build/spline-viewer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
+
+    <link rel="stylesheet" href="style.css"> <!-- Correct relative path -->
+    <style>
+        spline-viewer {
+            width: 80%; /* Adjust the width to your requirements */
+            height: 600px; /* Adjust the height to your requirements */
+        }
+    </style>
+</head>
+<body>
+    <h1>Dream Catcher</h1>
+    <spline-viewer url="https://prod.spline.design/Zli3o7XnaDtuVLjN/scene.splinecode"></spline-viewer>
+    <button id="enter-button">Enter</button>
+    <script>
+        // Event listener for the "Enter" button
+        document.getElementById('enter-button').addEventListener('click', function() {
+            window.location.href = 'dream.html'; // Redirects to the second page
+        });
+    </script>
+</body>
+</html>

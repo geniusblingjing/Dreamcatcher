@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tell me about your dream</title>
+    <link rel="stylesheet" href="style.css"> <!-- Adjust path if necessary -->
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+
+</head>
+<body>
+    <button id="go-back-button">Back</button>
+    <h1>Dream Catcher</h1>
+    <h2>Tell me about your dream</h2>
+    <textarea id="dream-input" placeholder="Describe your dream here..."></textarea>
+    <div class="button-container">
+        <button id="analyze-button">Analyze Dream</button>
+        <button id="generate-image-button">Generate Image</button>
+    </div>
+    <div id="loadingIndicator" style="display: none;">Loading...</div>
+    <div id="results-container">
+    
+    </div>
+    <button id="download-button" style="display: none;">Download Results</button> <!-- Hidden initially -->    
+    
+
+    <script src="app.js"></script> <!-- Adjust path if necessary -->
+    <script>
+        // Add an event listener to the Go Back button
+        document.getElementById('go-back-button').addEventListener('click', function() {
+            window.location.href = 'index.html'; // Redirect to index.html
+        });
+    </script>
+
+</body>
+</html>
+
+

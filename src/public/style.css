@@ -1,0 +1,265 @@
+body {
+    font-size: 20px;
+    color: #011838;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    /* Removed the margin to allow full use of the page and center content more effectively */
+    padding: 40px;
+    /* Adds padding instead of margin for a better frame */
+    display: flex;
+    /* Changes display to flex */
+    flex-direction: column;
+    /* Stacks children elements vertically */
+    align-items: center;
+    /* Centers children horizontally */
+    /* justify-content: center;  */
+    height: 100vh;
+    /* Makes the body take at least the full height of the viewport */
+    background: #000000;
+    /* Adds a light grey background for a modern look */
+}
+
+h1 {
+    font-family: "Kristen ITC";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 100px;
+    text-align: center;
+    background: linear-gradient(90deg, #824ACA 0%, #3C47AC 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    color: #FFF;
+    font-family: "Kristen ITC";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Styling for the textarea itself */
+#dream-input {
+    width: 80%;
+    /* Adjust width as needed */
+    height: 400px;
+    /* Adjust height as needed */
+    border-radius: 80px;
+    /* Adjust radius for smoothness */
+    padding: 50px;
+    /* Add padding */
+    background: #7da3f0;
+    font-family: "Kristen ITC";
+    color: #e7d9f5;
+    /* Text color */
+    font-size: 20px;
+    box-sizing: border-box;
+    /* Include padding and border in the element's width and height */
+}
+
+/* Styling for the placeholder */
+#dream-input::placeholder {
+    color: #4650B0;
+    /* Placeholder color */
+    font-family: "Kristen ITC";
+    font-size: 20px;
+    /* Adjust font size */
+}
+
+/* Container for Buttons */
+.button-container {
+    display: flex;
+    /* Enable Flexbox layout */
+    justify-content: center;
+    /* Center items horizontally */
+    align-items: center;
+    /* Align items vertically */
+    gap: 100px;
+    /* Space between buttons */
+    margin-top: 10px;
+    /* Add some space above the container */
+}
+
+/* Individual Button Styling */
+button {
+    width: 300px;
+    /* Adjust width */
+    height: 80px;
+    /* Adjust height */
+    border-radius: 60px;
+    /* Adjusted radius */
+    background: #616ee1;
+    /* Set background color */
+    color: #fff;
+    /* Set text color */
+    font-family: "Kristen ITC";
+    font-size: 20px;
+    /* Adjust font size */
+    font-weight: 400;
+    line-height: normal;
+    margin: 30px auto;
+    cursor: pointer;
+    /* Add pointer cursor */
+    border: none;
+    /* Remove border */
+    display: inline-flex;
+    /* Ensures items inside are centered */
+    align-items: center;
+    /* Vertically align items */
+    justify-content: center;
+    /* Horizontally align items */
+    padding: 10px 20px;
+    /* Ensure consistent padding */
+}
+
+button:hover {
+    background-color: #8b54cf;
+    /* Darker shade on hover */
+}
+
+/* Styling for the Go Back button */
+#go-back-button {
+    position: absolute;
+    /* Absolute positioning */
+    top: 50px;
+    /* Adjust the distance from the top */
+    left: 100px;
+    /* Adjust the distance from the left */
+    width: 150px;
+    /* Adjust width */
+    height: 50px;
+    /* Adjust height */
+    border-radius: 8px;
+    /* Rounded corners */
+    background: #7e7d7d;
+    /* Set a distinctive color */
+    color: #fff;
+    /* Text color */
+    font-size: 16px;
+    /* Adjust font size */
+    cursor: pointer;
+    /* Pointer cursor */
+    border: none;
+    /* Remove border */
+    text-align: center;
+    z-index: 1;
+    /* Ensure the button is visible over other elements */
+}
+
+#go-back-button:hover {
+    background-color: #e14d33;
+    /* Darker shade on hover */
+}
+
+
+img {
+    max-width: 100%;
+    /* Makes images responsive */
+    height: auto;
+    /* Maintains aspect ratio */
+    margin: 20px 0;
+    /* Adds vertical spacing */
+}
+
+p {
+    color: #000000;
+    max-width: 80%;
+    margin: 20px auto;
+}
+
+a {
+    font-size: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #1e69a7;
+    /* Color matches the button for consistency */
+    border-radius: 5px;
+    transition: color 0.3s, background-color 0.3s;
+    /* Smooth transitions for both color and background */
+}
+
+a:hover {
+    color: #ffffff;
+    /* White text on hover */
+    background-color: #05065c;
+    /* Dark blue background on hover */
+}
+
+#canvas {
+    cursor: crosshair;
+    /* Specific style for canvas interactions */
+}
+
+#loadingIndicator {
+    display: none;
+    /* position: fixed;
+    top: 50%;
+    left: 50%; */
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #ffffff;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Main Result Box */
+#result-box {
+    width: 80%;
+    /* Make the width responsive */
+    max-width: 1200px;
+    /* Maximum width constraint */
+    border-radius: 10px;
+    /* Rounded corners */
+    background: linear-gradient(180deg, #628AD8, #824ACA);
+    /* Gradient background */
+    padding: 20px;
+    /* Add padding to the box container */
+    margin: 20px auto;
+    /* Center and add spacing */
+    color: #fff;
+    /* Ensure text is readable on dark background */
+    box-sizing: border-box;
+    /* Ensure padding is included in the element's total width and height */
+}
+
+/* Summary Styling */
+.result-summary {
+    color: #FFF;
+    font-family: "Kristen ITC";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 15px;
+    /* Add space below */
+}
+
+/* Description Styling */
+.result-description {
+    color: #FFF;
+    font-family: "Kristen ITC";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 10px;
+    /* Add space below */
+}
+
+/* Analysis Styling */
+.result-analysis {
+    color: #FFF;
+    font-family: "Kristen ITC";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
